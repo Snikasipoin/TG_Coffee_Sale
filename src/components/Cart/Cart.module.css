@@ -1,0 +1,33 @@
+.cartContainer {
+  display: flex;
+  text-align: center;
+  background-color: #0c0f14;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  gap: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+  margin: 0 auto 90px;
+}
+.cartlistContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+.clearButtonContainer {
+  text-align: right;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 5px;
+  padding-right: 40px;
+}
+
+.clearButton {
+  border: none;
+  background: none;
+  color: rgb(175, 175, 175);
+  cursor: pointer;
+  text-align: left;
+}

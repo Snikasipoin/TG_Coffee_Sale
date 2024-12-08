@@ -1,0 +1,76 @@
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  justify-content: space-between;
+}
+
+.quantity {
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  font-weight: 600;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.itemDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+  width: 99px;
+  margin: auto 0;
+}
+
+.itemName {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.itemAdditive {
+  color: rgba(155, 155, 155, 1);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.price {
+  color: rgba(209, 120, 66, 1);
+  font-size: 18px;
+  font-weight: 600;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.priceAmount {
+  color: rgba(255, 255, 255, 1);
+}
+
+.priceCurrency {
+  font-size: 10px;
+}
+
+.deleteIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 10px;
+  align-self: stretch;
+  margin: auto 0;
+  cursor: pointer;
+}
+.quantityButton {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+.itemName > div {
+  white-space: pre-wrap;
+  font-size: 10px;
+  color: darkgrey;
+}

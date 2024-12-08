@@ -1,0 +1,17 @@
+.menuPageContainer {
+  display: flex;
+  background-color: #0c0f14;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  gap: 20px;
+}
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin-bottom: 90px;
+}

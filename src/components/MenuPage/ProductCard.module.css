@@ -1,0 +1,141 @@
+.card {
+  border-radius: 16px;
+  background-color: rgba(25, 32, 44, 1);
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 260px;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 1.109;
+  width: 100%;
+  height: 128px;
+  align-items: start;
+}
+
+.productImage {
+  border-radius: 10px;
+  position: absolute;
+  inset: 0;
+  height: 128px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ratingContainer {
+  position: relative;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.16);
+  display: flex;
+  margin-bottom: -21px;
+  min-height: 25px;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 8px;
+}
+
+.ratingIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 10px;
+}
+
+.ratingValue {
+  color: rgba(255, 255, 255, 1);
+  font: 600 10px Sora, sans-serif;
+}
+
+.contentWrapper {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  flex-direction: column;
+  padding: 0 12px;
+  text-align: left;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.productInfo {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  font-family: Sora, sans-serif;
+}
+
+.productTitle {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.productDescription {
+  color: rgba(155, 155, 155, 1);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.priceSection {
+  display: flex;
+  margin-top: 8px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(209, 120, 66, 1);
+  margin: auto 0;
+  font: 600 18px Sora, sans-serif;
+}
+
+.priceAmount {
+  color: rgba(255, 255, 255, 1);
+}
+
+.priceCurrency {
+  font-size: 10px;
+}
+
+.addButton {
+  border-radius: 10px;
+  background-color: rgba(209, 120, 66, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 32px;
+  justify-content: center;
+  height: 32px;
+  padding: 0 8px;
+  border: none;
+  cursor: pointer;
+}
+.correctButton {
+  border-radius: 10px;
+  background-color: #2ac822;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 32px;
+  justify-content: center;
+  height: 32px;
+  padding: 0 8px;
+  border: none;
+  cursor: pointer;
+}
+.addIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+}

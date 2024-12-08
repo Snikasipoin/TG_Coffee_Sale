@@ -1,0 +1,58 @@
+.priceContainer {
+  max-width: 500px;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  gap: 40px 74px;
+  font-family: Sora, sans-serif;
+  justify-content: space-between;
+}
+.priceWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+}
+
+.priceLabel {
+  color: rgba(155, 155, 155, 1);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.priceAmount {
+  color: rgba(209, 120, 66, 1);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.priceValue {
+  color: rgba(255, 255, 255, 1);
+}
+
+.priceCurrency {
+  font-size: 10px;
+}
+
+.addButton {
+  align-self: stretch;
+  border-radius: 15px;
+  background-color: rgba(209, 120, 66, 1);
+  min-height: 50px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  white-space: nowrap;
+  width: 200px;
+  margin: auto 0;
+  padding: 15px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.addButton:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}

@@ -1,0 +1,54 @@
+.container {
+  border-radius: 15px 15px 0 0;
+  background: rgba(12, 15, 20, 1);
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 18px 20px 62px;
+  max-height: 332px;
+  max-width: 600px;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  min-height: 127px;
+  flex-direction: column;
+  color: #fff;
+  text-align: left;
+}
+
+.title {
+  font: 600 24px Sora, sans-serif;
+}
+
+.description {
+  margin-top: 20px;
+  font: 300 17px Roboto, sans-serif;
+}
+
+.indicator {
+  align-self: center;
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  gap: 5px;
+}
+
+.orderButton {
+  width: 80%;
+  min-width: 205px;
+  text-decoration: none;
+  border-radius: 15px;
+  background: rgba(209, 120, 66, 1);
+  margin-top: 30px;
+  color: #fff;
+  padding: 15px 10px;
+  font: 600 16px Sora, sans-serif;
+}
+
+.orderButton:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}

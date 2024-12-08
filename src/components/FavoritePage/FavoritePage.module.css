@@ -1,0 +1,31 @@
+.favoritePageContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 110px;
+  flex-direction: column;
+  overflow-x: hidden;
+  gap: 20px;
+  align-items: center;
+}
+.titleContainer {
+  padding: 20px 0 0;
+  display: flex;
+  text-align: left;
+  width: 90%;
+  gap: 10px;
+  align-items: center;
+}
+
+.title {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+}
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin-bottom: 90px;
+}

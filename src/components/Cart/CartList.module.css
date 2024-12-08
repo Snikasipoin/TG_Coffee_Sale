@@ -1,0 +1,20 @@
+.cartContainer {
+  border-radius: 16px;
+  background-color: rgba(25, 32, 44, 1);
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  font-family: Sora, sans-serif;
+  justify-content: start;
+  padding: 20px 0;
+}
+
+.cartContent {
+  display: flex;
+  width: 286px;
+  max-width: 100%;
+  flex-direction: column;
+  gap: 42px;
+}

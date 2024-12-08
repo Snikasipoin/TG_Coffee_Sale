@@ -1,0 +1,33 @@
+.navigationBar {
+  position: fixed;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgba(12, 15, 20, 1);
+  box-shadow: 0 -14px 27px rgba(25, 32, 44, 1);
+  display: flex;
+  margin-top: 34px;
+  min-height: 90px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  z-index: 999;
+  bottom: 0;
+  margin-bottom: -1px;
+}
+
+.navIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  background: unset;
+  border: unset;
+}
+
+.navIconActive {
+  composes: navIcon;
+  width: 30px;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(29%) saturate(5891%)
+    hue-rotate(327deg) brightness(85%) contrast(92%);
+}
