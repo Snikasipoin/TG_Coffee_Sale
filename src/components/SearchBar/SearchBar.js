@@ -9,10 +9,9 @@ function SearchBar({ products }) {
   const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
 
-  // Фильтрация товаров при изменении запроса
   useEffect(() => {
     if (query.trim() === '') {
-      setFilteredProducts([]); // Если поле пустое, очищаем результаты
+      setFilteredProducts([]);
     } else {
       const results = products.filter((product) =>
         product.title.toLowerCase().includes(query.toLowerCase())
