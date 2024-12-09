@@ -27,10 +27,7 @@ function Cart({ products }) {
         totalAmount,
       };
 
-      const response = await axios.post(
-        'https://your-api-url.com/orders',
-        orderData
-      );
+      const response = await axios.post('СЮДА URL', orderData);
 
       if (response.status === 200 || response.status === 201) {
         Alert.success('Заказ успешно оформлен!');
