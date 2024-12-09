@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import { CartProvider } from './components/Cart/CartContext';
 import { FavoritesProvider } from './components/FavoritePage/FavoriteContext';
@@ -24,21 +25,15 @@ function App() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(API_URL);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch data: ${response.statusText}`);
-        }
-        const data = await response.json();
-        setProducts(data.products);
-        setSupplements(data.supplements);
-      } catch (err) {
+    axios
+      .get(API_URL)
+      .then((data) => {
+        setProducts(data.data.products);
+        setSupplements(data.data.supplements);
+      })
+      .catch((err) => {
         setError(err.message);
-      }
-    };
-
-    fetchProducts();
+      });
   }, []);
 
   const addToCart = (product) => {
