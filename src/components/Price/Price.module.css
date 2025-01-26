@@ -53,6 +53,22 @@
 }
 
 .addButton:focus {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: 2pxrgb (0, 173, 0);
+}
+.priceButtonDisabled {
+  opacity: 0.5;
+  align-self: stretch;
+  border-radius: 15px;
+  background-color: rgba(209, 120, 66, 1);
+  min-height: 50px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  white-space: nowrap;
+  width: 200px;
+  margin: auto 0;
+  padding: 15px 10px;
+  border: none;
+  cursor: pointer;
 }

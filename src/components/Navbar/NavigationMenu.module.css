@@ -7,7 +7,7 @@
   display: flex;
   margin-top: 34px;
   min-height: 90px;
-  width: 100%;
+  width: 100vw;
   align-items: center;
   justify-content: center;
   gap: 100px;
@@ -21,13 +21,29 @@
   object-fit: contain;
   object-position: center;
   width: 24px;
+  height: 25px;
   background: unset;
   border: unset;
 }
 
 .navIconActive {
   composes: navIcon;
-  width: 30px;
+  width: 24px;
   filter: brightness(0) saturate(100%) invert(80%) sepia(29%) saturate(5891%)
     hue-rotate(327deg) brightness(85%) contrast(92%);
+}
+.badge {
+  position: relative;
+  top: -35px;
+  right: -10px;
+  background-color: #2ac822;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

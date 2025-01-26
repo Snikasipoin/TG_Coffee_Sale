@@ -91,13 +91,16 @@ function ProductDetails({ products, supplements }) {
     Alert.success('Товар добавлен в корзину!');
   };
 
-  const isDrinkCategory = [
-    'кофе',
-    'холодные напитки',
-    'не кофе',
-    'раф',
-    'авторский кофе',
-  ].includes(product.category.toLowerCase());
+  const isDrinkCategory = (category) => {
+    const drinkCategories = [
+      'кофе',
+      'холодные напитки',
+      'не кофе',
+      'раф',
+      'авторский кофе',
+    ];
+    return drinkCategories.includes(category.toLowerCase());
+  };
 
   return (
     <>
@@ -185,14 +188,14 @@ function ProductDetails({ products, supplements }) {
                   }`}
                   onClick={() => handleDimensionChange(dimension)}
                 >
-                  {dimension} {!isDrinkCategory ? 'гр' : 'мл'}
+                  {dimension} {!isDrinkCategory(product.category) ? 'гр' : 'мл'}
                 </button>
               ))}
             </div>
           </div>
         )}
 
-        {isDrinkCategory && supplements.length > 0 && (
+        {isDrinkCategory(product.category) && supplements.length > 0 && (
           <div className={styles.supplementContainer}>
             <h2 className={styles.supplementTitle}>Дополнительно</h2>
             <div className={styles.supplementOptions}>

@@ -18,6 +18,9 @@
   width: 21px;
 }
 .searchInput {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   flex-grow: 1;
   background: transparent;
   border: none;

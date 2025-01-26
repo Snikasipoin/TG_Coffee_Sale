@@ -1,6 +1,6 @@
 import styles from './Price.module.css';
 
-function Price({ action, price, onClick }) {
+function Price({ action, price, onClick, disabled }) {
   return (
     <div className={styles.priceContainer}>
       <div className={styles.priceWrapper}>
@@ -11,7 +11,8 @@ function Price({ action, price, onClick }) {
         </div>
       </div>
       <button
-        className={styles.addButton}
+        disabled={disabled}
+        className={disabled ? styles.priceButtonDisabled : styles.addButton}
         onClick={onClick}
         tabIndex={0}
         aria-label={action}

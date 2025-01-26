@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useCart } from '../Cart/CartContext';
 
 import NavigationButton from './NavigationButton';
 
@@ -25,6 +26,7 @@ const navigationItems = [
 function NavigationMenu() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { totalQuantity } = useCart();
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -38,6 +40,7 @@ function NavigationMenu() {
           label={item.label}
           isActive={location.pathname === item.path}
           onClick={() => handleNavigation(item.path)}
+          badge={item.label === 'Basket' ? totalQuantity : 0}
         />
       ))}
     </nav>

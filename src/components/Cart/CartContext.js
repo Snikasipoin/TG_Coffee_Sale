@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useMemo } from 'react';
+import { createContext, useContext, useState, useMemo, useEffect } from 'react';
 
 const CartContext = createContext();
 
@@ -7,7 +7,18 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem('cart');
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error('Ошибка загрузки корзины:', error);
+      return [];
+    }
+  });
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  });
 
   const generateCartItemId = (baseId, dimension, supplements) => {
     const supplementsHash = supplements
@@ -16,6 +27,10 @@ export const CartProvider = ({ children }) => {
       .join('-');
     return `${baseId}-${dimension}-${supplementsHash}`;
   };
+
+  const totalQuantity = useMemo(() => {
+    return cart.reduce((sum, item) => sum + item.quantity, 0);
+  }, [cart]);
 
   const addToCart = (product) => {
     const { baseId, name, dimension, supplements = [], basePrice } = product;
@@ -80,6 +95,7 @@ export const CartProvider = ({ children }) => {
         updateQuantity,
         clearCart,
         totalAmount,
+        totalQuantity,
       }}
     >
       {children}

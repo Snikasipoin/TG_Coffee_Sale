@@ -10,7 +10,7 @@ import Alert from '../Alert/Alert';
 import styles from './Cart.module.css';
 
 function Cart({ products }) {
-  const { cart, totalAmount, clearCart } = useCart();
+  const { cart, totalAmount, clearCart, totalQuantity } = useCart();
 
   const handleOrderSubmit = async () => {
     try {
@@ -42,23 +42,26 @@ function Cart({ products }) {
   };
 
   return (
-    <div className={styles.cartContainer}>
-      <SearchBar products={products} />
-      <div className={styles.cartlistContainer}>
-        <div className={styles.clearButtonContainer}>
-          <button className={styles.clearButton} onClick={() => clearCart()}>
-            Очистить
-          </button>
+    <>
+      <div className={styles.cartContainer}>
+        <SearchBar products={products} />
+        <div className={styles.cartlistContainer}>
+          <div className={styles.clearButtonContainer}>
+            <button className={styles.clearButton} onClick={() => clearCart()}>
+              Очистить
+            </button>
+          </div>
+          <CartList />
         </div>
-        <CartList />
+        <Price
+          action="Оформить заказ"
+          price={totalAmount}
+          onClick={handleOrderSubmit}
+          disabled={totalQuantity ? false : true}
+        />
       </div>
       <NavigationMenu />
-      <Price
-        action="Оформить заказ"
-        price={totalAmount}
-        onClick={handleOrderSubmit}
-      />
-    </div>
+    </>
   );
 }
 

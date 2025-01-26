@@ -1,5 +1,5 @@
 import { useCart } from '../Cart/CartContext';
-
+import { useNavigate } from 'react-router-dom'; // Для навигации на детальную страницу
 import styles from './ProductCard.module.css';
 
 function ProductCard({
@@ -14,6 +14,16 @@ function ProductCard({
   onClick,
 }) {
   const { cart, addToCart, removeFromCart } = useCart();
+  const navigate = useNavigate(); // Инициализация функции навигации
+
+  // Категории, в которых могут быть добавки
+  const drinkCategories = [
+    'кофе',
+    'холодные напитки',
+    'не кофе',
+    'раф',
+    'авторский кофе',
+  ];
 
   const isInCart = cart.some(
     (item) =>
@@ -25,6 +35,13 @@ function ProductCard({
   const handleAddToCart = (e) => {
     e.stopPropagation();
 
+    // Проверяем, если категория требует добавки, открываем детальную страницу
+    if (drinkCategories.includes(category.toLowerCase())) {
+      navigate(`/menu/${id}`); // Переход на детальную страницу с ID продукта
+      return;
+    }
+
+    // Если добавок не требуется, добавляем товар в корзину
     const selectedDimension = dimensions.length > 0 ? dimensions[0] : '';
 
     const productToCart = {
@@ -51,15 +68,6 @@ function ProductCard({
           className={styles.productImage}
           alt={title}
         />
-        {/* <div className={styles.ratingContainer}>   // Рейтинг напитка выводить не надо(данный функционал под вопросом)
-          <img
-            loading="lazy"
-            src="/assets/icons/Rating.svg"
-            className={styles.ratingIcon} 
-            alt="Rating"
-          />
-          <span className={styles.ratingValue}>{rating}</span>
-        </div> */}
       </div>
       <div className={styles.contentWrapper}>
         <div className={styles.productInfo}>

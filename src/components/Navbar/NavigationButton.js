@@ -1,14 +1,20 @@
 import styles from './NavigationMenu.module.css';
 
-function NavigationButton({ icon, isActive, label, onClick }) {
+function NavigationButton({ icon, isActive, label, onClick, badge }) {
   return (
     <button
-      className={isActive ? styles.navIconActive : styles.navIcon}
+      className={styles.navIcon}
       aria-label={label}
       tabIndex={0}
       onClick={onClick}
     >
-      <img src={icon} alt="" loading="lazy" />
+      <img
+        src={icon}
+        alt=""
+        loading="lazy"
+        className={isActive ? styles.navIconActive : styles.navIcon}
+      />
+      {badge > 0 && <span className={styles.badge}>{badge}</span>}
     </button>
   );
 }

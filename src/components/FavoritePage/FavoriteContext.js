@@ -1,9 +1,20 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const savedFavorites = localStorage.getItem('favorites');
+      return savedFavorites ? JSON.parse(savedFavorites) : [];
+    } catch (error) {
+      console.error('Ошибк загрузки избранного:', error);
+      return [];
+    }
+  });
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  });
 
   const toggleFavorite = (product) => {
     setFavorites((prevFavorites) => {
