@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TG_Coffee_Sale/static/css/main.961b60d5.css",
+    "main.js": "/TG_Coffee_Sale/static/js/main.98d0a363.js",
+    "index.html": "/TG_Coffee_Sale/index.html",
+    "main.961b60d5.css.map": "/TG_Coffee_Sale/static/css/main.961b60d5.css.map",
+    "main.98d0a363.js.map": "/TG_Coffee_Sale/static/js/main.98d0a363.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.961b60d5.css",
+    "static/js/main.98d0a363.js"
+  ]
+}
