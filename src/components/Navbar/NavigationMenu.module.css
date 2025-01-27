@@ -27,11 +27,11 @@
 }
 
 .navIconActive {
-  composes: navIcon;
   width: 24px;
   filter: brightness(0) saturate(100%) invert(80%) sepia(29%) saturate(5891%)
     hue-rotate(327deg) brightness(85%) contrast(92%);
 }
+
 .badge {
   position: relative;
   top: -35px;

@@ -43,7 +43,7 @@ function CartItem({ quantity, id, name, price, supplements, dimension }) {
 
       <img
         loading="lazy"
-        src="/assets/icons/dellete.svg"
+        src="./assets/icons/dellete.svg"
         className={styles.deleteIcon}
         alt="Remove item"
         tabIndex="0"

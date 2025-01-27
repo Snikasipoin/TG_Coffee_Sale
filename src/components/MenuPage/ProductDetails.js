@@ -117,16 +117,16 @@ function ProductDetails({ products, supplements }) {
               className={styles.actionButton}
               onClick={() => window.history.back()}
             >
-              <img src="/assets/icons/ArrowLeft.svg" alt="Back"></img>
+              <img src="./assets/icons/ArrowLeft.svg" alt="Back"></img>
             </button>
             <button
               className={styles.actionButton}
               onClick={() => toggleFavorite(product)}
             >
               {isFavorite ? (
-                <img src="/assets/icons/noFavorite.svg" alt="noFavorite"></img>
+                <img src="./assets/icons/noFavorite.svg" alt="noFavorite"></img>
               ) : (
-                <img src="/assets/icons/heart.svg" alt="favorite"></img>
+                <img src="./assets/icons/heart.svg" alt="favorite"></img>
               )}
             </button>
           </div>

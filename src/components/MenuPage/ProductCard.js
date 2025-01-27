@@ -1,5 +1,5 @@
 import { useCart } from '../Cart/CartContext';
-import { useNavigate } from 'react-router-dom'; // Для навигации на детальную страницу
+import { useNavigate } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 
 function ProductCard({
@@ -14,7 +14,7 @@ function ProductCard({
   onClick,
 }) {
   const { cart, addToCart, removeFromCart } = useCart();
-  const navigate = useNavigate(); // Инициализация функции навигации
+  const navigate = useNavigate();
 
   // Категории, в которых могут быть добавки
   const drinkCategories = [
@@ -35,13 +35,11 @@ function ProductCard({
   const handleAddToCart = (e) => {
     e.stopPropagation();
 
-    // Проверяем, если категория требует добавки, открываем детальную страницу
     if (drinkCategories.includes(category.toLowerCase())) {
-      navigate(`/menu/${id}`); // Переход на детальную страницу с ID продукта
+      navigate(`/menu/${id}`);
       return;
     }
 
-    // Если добавок не требуется, добавляем товар в корзину
     const selectedDimension = dimensions.length > 0 ? dimensions[0] : '';
 
     const productToCart = {
@@ -91,8 +89,8 @@ function ProductCard({
               loading="lazy"
               src={
                 isInCart
-                  ? '/assets/icons/correct.svg'
-                  : '/assets/icons/plus.svg'
+                  ? './assets/icons/correct.svg'
+                  : './assets/icons/plus.svg'
               }
               className={styles.addIcon}
               alt={isInCart ? 'Correct' : 'Add'}

@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
   });
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
-  });
+  }, [cart]);
 
   const generateCartItemId = (baseId, dimension, supplements) => {
     const supplementsHash = supplements
@@ -27,7 +27,6 @@ export const CartProvider = ({ children }) => {
       .join('-');
     return `${baseId}-${dimension}-${supplementsHash}`;
   };
-
   const totalQuantity = useMemo(() => {
     return cart.reduce((sum, item) => sum + item.quantity, 0);
   }, [cart]);

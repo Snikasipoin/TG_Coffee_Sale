@@ -7,17 +7,17 @@ import styles from './NavigationMenu.module.css';
 
 const navigationItems = [
   {
-    icon: '/assets/icons/heart.svg',
+    icon: './assets/icons/heart.svg',
     label: 'Favorites',
     path: '/favorites',
   },
   {
-    icon: '/assets/icons/home.svg',
+    icon: './assets/icons/home.svg',
     label: 'Home',
     path: '/menu',
   },
   {
-    icon: '/assets/icons/basket.svg',
+    icon: './assets/icons/basket.svg',
     label: 'Basket',
     path: '/cart',
   },

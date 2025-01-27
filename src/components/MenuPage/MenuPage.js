@@ -29,38 +29,35 @@ function MenuPage({ products }) {
     : products;
 
   return (
-    <>
-      {' '}
-      <div className={styles.menuPageContainer}>
-        <SearchBar products={products} />
-        <CategoryList
-          products={products}
-          onCategorySelect={handleCategorySelect}
-          activeCategory={selectedCategory}
-        />
-        <div className={styles.productsContainer}>
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                image={product.image}
-                rating={product.rating}
-                title={product.title}
-                category={product.category}
-                price={product.price}
-                dimensions={product.Dimensions || []}
-                supplements={product.supplements || []}
-                onClick={() => handleClick(product.id)}
-              />
-            ))
-          ) : (
-            <p>Нет товаров в данной категории</p>
-          )}
-        </div>
+    <div className={styles.menuPageContainer}>
+      <SearchBar products={products} />
+      <CategoryList
+        products={products}
+        onCategorySelect={handleCategorySelect}
+        activeCategory={selectedCategory}
+      />
+      <div className={styles.productsContainer}>
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              image={product.image}
+              rating={product.rating}
+              title={product.title}
+              category={product.category}
+              price={product.price}
+              dimensions={product.Dimensions || []}
+              supplements={product.supplements || []}
+              onClick={() => handleClick(product.id)}
+            />
+          ))
+        ) : (
+          <p>Нет товаров в данной категории</p>
+        )}
       </div>
       <NavigationMenu />
-    </>
+    </div>
   );
 }
 

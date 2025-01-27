@@ -65,6 +65,7 @@
   cursor: pointer;
 }
 .quantityButton {
+  cursor: pointer;
   background: none;
   border: none;
   border-radius: 5px;

@@ -8,13 +8,13 @@ export const FavoritesProvider = ({ children }) => {
       const savedFavorites = localStorage.getItem('favorites');
       return savedFavorites ? JSON.parse(savedFavorites) : [];
     } catch (error) {
-      console.error('Ошибк загрузки избранного:', error);
+      console.error('Ошибка загрузки избранного:', error);
       return [];
     }
   });
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
-  });
+  }, [favorites]);
 
   const toggleFavorite = (product) => {
     setFavorites((prevFavorites) => {

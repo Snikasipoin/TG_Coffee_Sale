@@ -12,7 +12,6 @@
   flex-direction: column;
   margin: 0 auto;
   position: relative;
-  aspect-ratio: 1.109;
   width: 100%;
   height: 128px;
   align-items: start;
@@ -20,7 +19,6 @@
 
 .productImage {
   border-radius: 10px;
-  position: absolute;
   inset: 0;
   height: 128px;
   width: 100%;

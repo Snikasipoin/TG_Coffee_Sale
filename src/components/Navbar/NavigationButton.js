@@ -14,7 +14,7 @@ function NavigationButton({ icon, isActive, label, onClick, badge }) {
         loading="lazy"
         className={isActive ? styles.navIconActive : styles.navIcon}
       />
-      {badge > 0 && <span className={styles.badge}>{badge}</span>}
+      {badge > 0 && <div className={styles.badge}>{badge}</div>}
     </button>
   );
 }

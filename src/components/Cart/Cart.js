@@ -42,26 +42,24 @@ function Cart({ products }) {
   };
 
   return (
-    <>
-      <div className={styles.cartContainer}>
-        <SearchBar products={products} />
-        <div className={styles.cartlistContainer}>
-          <div className={styles.clearButtonContainer}>
-            <button className={styles.clearButton} onClick={() => clearCart()}>
-              Очистить
-            </button>
-          </div>
-          <CartList />
+    <div className={styles.cartContainer}>
+      <SearchBar products={products} />
+      <div className={styles.cartlistContainer}>
+        <div className={styles.clearButtonContainer}>
+          <button className={styles.clearButton} onClick={() => clearCart()}>
+            Очистить
+          </button>
         </div>
-        <Price
-          action="Оформить заказ"
-          price={totalAmount}
-          onClick={handleOrderSubmit}
-          disabled={totalQuantity ? false : true}
-        />
+        <CartList />
       </div>
       <NavigationMenu />
-    </>
+      <Price
+        action="Оформить заказ"
+        price={totalAmount}
+        onClick={handleOrderSubmit}
+        disabled={totalQuantity ? false : true}
+      />
+    </div>
   );
 }
 

@@ -53,8 +53,9 @@
 }
 
 .addButton:focus {
-  outline: 2px solid rgb(255, 255, 255);
-  outline-offset: 2pxrgb (0, 173, 0);
+  border: none;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 .priceButtonDisabled {
   opacity: 0.5;

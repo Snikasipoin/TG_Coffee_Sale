@@ -24,7 +24,6 @@
 
 .categoryButton.active {
   background-color: #d17842;
-  font-weight: 600;
 }
 
 .categoryButton:hover {

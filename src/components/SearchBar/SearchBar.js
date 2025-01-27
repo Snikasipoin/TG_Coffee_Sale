@@ -33,7 +33,7 @@ function SearchBar({ products }) {
       >
         <img
           loading="lazy"
-          src="/assets/icons/search.svg"
+          src="./assets/icons/search.svg"
           className={styles.searchIcon}
           alt=""
         />

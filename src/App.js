@@ -16,7 +16,7 @@ import Cart from './components/Cart/Cart';
 
 import './App.css';
 
-const API_URL = '/data/products.json';
+const API_URL = './data/products.json';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -51,7 +51,7 @@ function App() {
   return (
     <CartProvider>
       <FavoritesProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/TG_Coffee_Sale">
           <div className="App">
             <AlertContainer />
             <Routes>
