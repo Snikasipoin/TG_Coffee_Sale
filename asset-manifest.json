@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/TG_Coffee_Sale/static/css/main.961b60d5.css",
-    "main.js": "/TG_Coffee_Sale/static/js/main.65492abd.js",
+    "main.js": "/TG_Coffee_Sale/static/js/main.22222e5d.js",
     "index.html": "/TG_Coffee_Sale/index.html",
     "main.961b60d5.css.map": "/TG_Coffee_Sale/static/css/main.961b60d5.css.map",
-    "main.65492abd.js.map": "/TG_Coffee_Sale/static/js/main.65492abd.js.map"
+    "main.22222e5d.js.map": "/TG_Coffee_Sale/static/js/main.22222e5d.js.map"
   },
   "entrypoints": [
     "static/css/main.961b60d5.css",
-    "static/js/main.65492abd.js"
+    "static/js/main.22222e5d.js"
   ]
 }
