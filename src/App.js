@@ -51,7 +51,7 @@ function App() {
   return (
     <CartProvider>
       <FavoritesProvider>
-        <BrowserRouter basename="/TG_Coffee_Sale">
+        <BrowserRouter basename="/TG_Coffee_Sale/">
           <div className="App">
             <AlertContainer />
             <Routes>

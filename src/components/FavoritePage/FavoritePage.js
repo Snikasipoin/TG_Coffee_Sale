@@ -16,7 +16,7 @@ function FavoritePAge() {
   return (
     <div className={styles.favoritePageContainer}>
       <div className={styles.titleContainer}>
-        <img src="/assets/icons/heart.svg" alt="favorite"></img>
+        <img src="./assets/icons/heart.svg" alt="favorite"></img>
         <h2 className={styles.title}>Избранное</h2>
       </div>
       <div className={styles.productsContainer}>
